@@ -1,8 +1,10 @@
 body {
   background-color: azure;
+  margin: 10px, 20px;
 }
 
 h1 {
+  margin: 10px, 20px;
   font-size: 25px;
   color: blue;
 }
@@ -17,9 +19,6 @@ p {
 /* margin: 20px 10px; */
 /* margin-top: 60px; */
 width: 80%;
-margin: 60px auto 0 auto;
+margin: 40px auto 0 auto;
 }
 
-h1 {
-  color: red;
-}
