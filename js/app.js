@@ -73,20 +73,20 @@ console.log('Correct guesses: ', tallyWins);
 
 //Sixth Question
 var grandkidQty = parseInt(prompt('I have grandkids, but fewer than 10. Care to guess how many?'));
-console.log('first guess?: ', grandkidQty); //Display pre-loop guess in console
+//console.log('first guess?: ', grandkidQty); //Display pre-loop guess in console
 
 for( var i = 0; i < 4; i++) {
-  console.log('What number?:', typeof grandkidQty); // Confirm current guess entering the loop
+//  console.log('What number?:', typeof grandkidQty); // Confirm current guess entering the loop
 
   if (grandkidQty === 9) { // Catching the correct guess...
     alert('You got it!');
-    console.log('Correct guess: ', grandkidQty);
+    //console.log('Correct guess: ', grandkidQty);
     tallyWins++;
     i = 5;
   } else if (grandkidQty < 9) { // Guess was too few...
     alert('No, too few. Try again.');
     grandkidQty = parseInt(prompt('Guess again: '));
-    console.log('New guess?: ', grandkidQty);
+    //console.log('New guess?: ', grandkidQty);
   } else if (grandkidQty > 9) { //Guess was too many...
     alert('No, too many (or is it? Well, not that many YET). Try again.');
     grandkidQty = parseInt(prompt('Guess again: ')); //New guess to re-enter the loop.
@@ -99,40 +99,29 @@ console.log('Correct guesses: ', tallyWins);
 //Seventh Question
 var favoriteCookies;
 favoriteCookies = ['ginger snaps', 'snickerdoodles', 'oatmeal raisin', 'molasses']; //Some of the top correct answers
-var i = 0;
+i = 0;
 var cookieGuess = prompt('Can you guess one of my favorite cookie types? - Food, not web...');
 
 while(i < 6) { // Let looping ensue! Six rounds only.
   console.log('What type of cookie?', cookieGuess);
-  if (cookieGuess = favoriteCookies[0]) { // If 'ginger snaps' was guessed...
-    alert('You got it! Ginger snaps is one of them.');
-    console.log('Correct guess: ', cookieGuess);
-    tallyWins++;
-    break;
-  } else if (cookieGuess = favoriteCookies[1]) { // If 'snickerdoodles' was guessed...
-    alert('You got it! Snickerdoodle is one of them.');
-    console.log('Correct guess: ', cookieGuess);
-    tallyWins++;
-    break;
-  } else if (cookieGuess = favoriteCookies[2]) { // If 'oatmeal raisin' was guessed...
-    alert('You got it! Oatmeal raisin is probably my favorite of all.');
-    console.log('Correct guess: ', cookieGuess);
-    tallyWins++;
-    break;
-  } else if (cookieGuess = favoriteCookies[3]) { // If 'molasses' was guessed...
-    alert('You got it! Molasses cookies are among them.');
+  if (cookieGuess === favoriteCookies[i]) { // If one of the correct cookies was guessed...
+    alert('You got it! ' + favoriteCookies[i] + ' is one of them.');
     console.log('Correct guess: ', cookieGuess);
     tallyWins++;
     break;
   } else if (i < 5) {
     cookieGuess = prompt('Sorry, that was not on my list. Try again...');
     i++;
-  } else if (i = 5) {
+  } else {
+    (i = 5);
     alert('Ohhhh. NO SOUP FOR YOU (and no COOKIES, either)!');
+  }
 }
+
 alert('Correct answers would have been...');
 document.write( favoriteCookies.toString());
 console.log('Correct guesses: ', tallyWins);
+
 
 /*In addition to the user stories stated above, continue to use console.logs throughout the code to 
 track the questions that are being asked to the user, and add additional CSS to style your HTML page. */
