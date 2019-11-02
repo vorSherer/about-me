@@ -57,36 +57,29 @@ if (hireMe === 'yes' || hireMe === 'y') {
   alert('Really? Missing a prize....');
 }
 
-var answerSix = parseInt(prompt('What number am I thinking of?'));
-console.log('first guess?: ', answerSix);
+var grandkidQty = parseInt(prompt('I have grandkids, but fewer than 10. Care to guess how many?'));
+console.log('first guess?: ', grandkidQty);
 
-for( var i = 0; i < 6; i++) {
-  console.log('What number?:', typeof answerSix);
+for( var i = 0; i < 4; i++) {
+  console.log('What number?:', typeof grandkidQty);
 
-  if (answerSix === 5) {
+  if (grandkidQty === 9) {
     alert('You got it!');
-    console.log('Correct guess: ', answerSix);
-    i = 6;
-  } else if (answerSix < 5) {
-    alert('No, too low. Try again.');
-    answerSix = parseInt(prompt('Guess again: '));
-    console.log('New guess?: ', answerSix);
-  } else if (answerSix > 5) {
-    alert('No, too high. Try again.');
-    answerSix = parseInt(prompt('Guess again: '));
-    console.log('New guess?: ', answerSix);
+    console.log('Correct guess: ', grandkidQty);
+    i = 5;
+  } else if (grandkidQty < 9) {
+    alert('No, too few. Try again.');
+    grandkidQty = parseInt(prompt('Guess again: '));
+    console.log('New guess?: ', grandkidQty);
+  } else if (grandkidQty > 9) {
+    alert('No, too many (or is it? Well, not that many YET). Try again.');
+    grandkidQty = parseInt(prompt('Guess again: '));
+    console.log('New guess?: ', grandkidQty);
   }
-  console.log('Correct guess confirmed: ', answerSix);
+  console.log('Correct guess confirmed: ', grandkidQty);
 }
+alert('For those who did not guess correctly, I have 9 - so far - and they are a joy!');
 
-/*As a user, I would like to be guided to an answer through a series of feedback responses so that I 
-can learn more about the site owner.
-Add a 6th question to the guessing game that takes in a numeric input by prompting the user to guess 
-a number.
-Indicates through an alert if the guess is “too high” or “too low”.
-It should give the user exactly four opportunities to get the correct answer.
-After all attempts have been exhausted, tell the user the correct answer. Consider using a loop of 
-some sort. */
 
 /*As a user, I would like to guess the answer to a question that could have many possibilities so 
 that I can have fun with with a guessing game.
