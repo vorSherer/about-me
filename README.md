@@ -11,3 +11,6 @@
 1. A __*seventh question*__ testing for a *string* response matching an array element using a loop.
 1. Adding a **tally counter** of the user's correct responses.
 
+2019-11-02 Lab 4 Paired Programing with the __*AWESOME*__ Cait Rowland (with whom I would *gladly* share a cubicle with any day!!!)
+Special thanks to Enoch Strok, our favorite cheerleader!!!!
+
