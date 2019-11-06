@@ -4,13 +4,18 @@ body {
 }
 
 h1 {
-  margin: 10px, 20px;
+  /*width: 80%;*/
+  margin: 40px auto 20 auto;
   font-size: 25px;
   color: blue;
 }
 
 h2 {
-  margin: 80%;
+  position: relative;
+  margin: 40px auto 20 auto;
+  text-decoration: underline;
+  font-size: 20px;
+  color: darkmagenta;
 }
 
 h3 {
@@ -20,17 +25,47 @@ h3 {
 
 /* Margin has 4 properties - TRBL = Trouble!! */
 p {
-/* margin: 20px 10px; */
-/* margin-top: 60px; */
   width: 80%;
   margin: 40px auto 0 auto;
+  display: block;
+}
+
+#interests {
+  width: 80%;
+  margin: 40px auto 0 auto;
+  display: block;
+}
+
+#skillSet {
+  width: 80%;
+  margin: 40px auto 0 auto;
+  display: block;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul {
+  list-style-type: circle;
 }
 
 li {
-/* margin: 20px 10px; */
-/* margin-top: 60px; */
-  width: 80%;
-  margin: 40px auto 0 auto;
+  margin-top: 5px;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: green;
 }
 
 footer {

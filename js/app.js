@@ -132,12 +132,13 @@ function guiltyPleasure() {
       console.log('new guess:' , cookieGuess);
     }
   }
-  
+
   alert('Correct answers would have been...' + favoriteCookies);
   console.log('Correct guesses: ', tallyWins);
 }
 
-function quizQuestions {
+//Quiz button launches the questions as follows:
+function quizQuestions() {
   origins();
   cali();
   degree();
@@ -145,12 +146,15 @@ function quizQuestions {
   occupationalTherapy();
   guiltyPleasure();
   bonusQ();
+  signOff();
 }
 
 // Once the ordeal is finished, I bid the user farewell as follows, including their number of correct guesses;
-alert(
-  'See, ' +
-  userName +
-  ', that was not so bad! You got a total of ' + tallyWins + ' right out of the 7 questions.  As to that "hire me" answer, we should get some lunch and chat a bit... Hmm?');
-  
-  // End of lab.
+function signOff() {
+  alert(
+    'See, ' +
+    userName +
+    ', that was not so bad! You got a total of ' + tallyWins + ' right out of the 7 questions.  As to that "hire me" answer, we should get some lunch and chat a bit... Hmm?');
+}
+
+// End of lab.
