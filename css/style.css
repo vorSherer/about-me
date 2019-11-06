@@ -1,6 +1,6 @@
 body {
   background-color: azure;
-  margin: 10px, 20px;
+  margin: 10vh, 20vw;
 }
 
 h1 {
@@ -9,16 +9,30 @@ h1 {
   color: blue;
 }
 
+h2 {
+  margin: 80%;
+}
+
 h3 {
-text-decoration: underline;
-font-size: 15px;
+  text-decoration: underline;
+  font-size: 15px;
 }
 
 /* Margin has 4 properties - TRBL = Trouble!! */
 p {
 /* margin: 20px 10px; */
 /* margin-top: 60px; */
-width: 80%;
-margin: 40px auto 0 auto;
+  width: 80%;
+  margin: 40px auto 0 auto;
 }
 
+li {
+/* margin: 20px 10px; */
+/* margin-top: 60px; */
+  width: 80%;
+  margin: 40px auto 0 auto;
+}
+
+footer {
+  font-size: 12px;
+}

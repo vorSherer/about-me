@@ -23,7 +23,6 @@ function origins () {
   }
   console.log('Correct guesses: ', tallyWins);
 }
-origins();
 
 // Second Question
 function cali() {
@@ -38,7 +37,6 @@ function cali() {
   }
   console.log('Correct guesses: ', tallyWins);
 }
-cali();
 
 // Third Question
 function degree() {
@@ -54,14 +52,12 @@ function degree() {
   }
   console.log('Correct guesses: ', tallyWins);
 }
-degree();
 
 //Fourth Question
 function la() {
   var workedInLA = prompt('Did I work in Los Angeles, CA?').toLowerCase();
   console.log('work in Los Angeles?:', workedInLA);
-
-  if (workedInLA === 'no' || workedInLA === 'n') {
+    if (workedInLA === 'no' || workedInLA === 'n') {
     alert('Good attention to detail!');
     tallyWins++;
   } else {
@@ -69,13 +65,12 @@ function la() {
   }
   console.log('Correct guesses: ', tallyWins);
 }
-la();
 
 //Fifth Question
 function bonusQ() {
   var hireMe = prompt('From what you read, would you hire me?');
   console.log('Hire me?: ', hireMe);
-
+  
   if (hireMe === 'yes' || hireMe === 'y') {
     alert('Glad to hear that! Keep me in your network!');
     tallyWins++;
@@ -84,16 +79,15 @@ function bonusQ() {
   }
   console.log('Correct guesses: ', tallyWins);
 }
-bonusQ();
 
 //Sixth Question
 function occupationalTherapy() {
   var grandkidQty = parseInt(prompt('I have grandkids, but fewer than 10. Care to guess how many?'));
   //console.log('first guess?: ', grandkidQty); //Display pre-loop guess in console
-
+  
   for( var i = 0; i < 4; i++) {
     //  console.log('What number?:', typeof grandkidQty); // Confirm current guess entering the loop
-
+    
     if (grandkidQty === 9) { // Catching the correct guess...
       alert('You got it!');
       //console.log('Correct guess: ', grandkidQty);
@@ -102,7 +96,7 @@ function occupationalTherapy() {
     } else if (grandkidQty < 9) { // Guess was too few...
       alert('No, too few. Try again.');
       grandkidQty = parseInt(prompt('Guess again: '));
-    //console.log('New guess?: ', grandkidQty);
+      //console.log('New guess?: ', grandkidQty);
     } else if (grandkidQty > 9) { //Guess was too many...
       alert('No, too many (or is it? Well, not that many YET). Try again.');
       grandkidQty = parseInt(prompt('Guess again: ')); //New guess to re-enter the loop.
@@ -112,15 +106,14 @@ function occupationalTherapy() {
   alert('For those who did not guess correctly, I have 9 - so far - and they are a joy! Spend much time around me and you will hear of them.');
   console.log('Correct guesses: ', tallyWins);
 }
-occupationalTherapy();
 
-// //Seventh Question
+//Seventh Question
 function guiltyPleasure() {
   var favoriteCookies;
   favoriteCookies = ['ginger snaps', 'snickerdoodles', 'oatmeal raisin', 'molasses']; //Some of the top correct answers
   var count = 0;
   var cookieGuess = prompt('Can you guess one of my favorite cookie types? - Food, not web...');
-
+  
   while(count < 6) { // Let looping ensue! Six rounds only.
     console.log('What type of cookie?', cookieGuess);
     for (var i = 0; i < favoriteCookies.length; i++) {
@@ -139,16 +132,25 @@ function guiltyPleasure() {
       console.log('new guess:' , cookieGuess);
     }
   }
-
+  
   alert('Correct answers would have been...' + favoriteCookies);
   console.log('Correct guesses: ', tallyWins);
 }
-guiltyPleasure();
+
+function quizQuestions {
+  origins();
+  cali();
+  degree();
+  la();
+  occupationalTherapy();
+  guiltyPleasure();
+  bonusQ();
+}
 
 // Once the ordeal is finished, I bid the user farewell as follows, including their number of correct guesses;
 alert(
   'See, ' +
-    userName +
-    ', that was not so bad! You got a total of ' + tallyWins + ' right out of the 7 questions.  As to that "hire me" answer, we should get some lunch and chat a bit... Hmm?');
-
-// End of lab.
+  userName +
+  ', that was not so bad! You got a total of ' + tallyWins + ' right out of the 7 questions.  As to that "hire me" answer, we should get some lunch and chat a bit... Hmm?');
+  
+  // End of lab.
