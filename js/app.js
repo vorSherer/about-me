@@ -12,11 +12,11 @@ alert(
 );
 
 //First Question//
-function origins () {
-  var birthState = prompt('First question: Was I born in Kentucky?').toLowerCase();
-  console.log('Born in Kentucky?:', birthState);
-  if (birthState === 'no' || birthState === 'n') {
-    alert('Nailed It! Must have been the accent that gave it away.');
+function cardCPUs () {
+  var useArduinos = prompt('First question: Is working with Arduinos listed among my history?').toLowerCase();
+  console.log('use Arduinos?: ', useArduinos);
+  if (useArduinos === 'no' || useArduinos === 'n') {
+    alert('Nailed It! Raspberry Pi, yes. Arduino, not yet.');
     tallyWins++;
   } else {
     alert('Nope card.');
@@ -25,12 +25,12 @@ function origins () {
 }
 
 // Second Question
-function cali() {
-  var gradCity = prompt('Did I graduate in San Jose, CA?').toLowerCase();
-  console.log('Graduate in San Jose?:', gradCity);
+function militaryPast() {
+  var marinesPast = prompt('I have had direct influences by four of the five branches of the U.S. military. Were the Marines specifically mentioned in my Bio?').toLowerCase();
+  console.log('marinesPast?: ', marinesPast);
 
-  if (gradCity === 'yes' || gradCity === 'y') {
-    alert('Yes, I did. Good job!');
+  if (marinesPast === 'yes' || marinesPast === 'y') {
+    alert('Yes, they were. Good job!');
     tallyWins++;
   } else {
     alert('OK, so you slept through that part.');
@@ -54,14 +54,14 @@ function degree() {
 }
 
 //Fourth Question
-function la() {
-  var workedInLA = prompt('Did I work in Los Angeles, CA?').toLowerCase();
-  console.log('work in Los Angeles?:', workedInLA);
-    if (workedInLA === 'no' || workedInLA === 'n') {
+function writer() {
+  var publishedYet = prompt('I mentioned writing; did I say whether I am published?').toLowerCase();
+  console.log('Published writer yet?:', publishedYet);
+  if (publishedYet === 'no' || publishedYet === 'n') {
     alert('Good attention to detail!');
     tallyWins++;
   } else {
-    alert('No, it was the San Fernando valley, north of LA!');
+    alert('No, I have one serious project in work and ideas for several more, but none are yet ready for Prime Time.');
   }
   console.log('Correct guesses: ', tallyWins);
 }
@@ -70,7 +70,7 @@ function la() {
 function bonusQ() {
   var hireMe = prompt('From what you read, would you hire me?');
   console.log('Hire me?: ', hireMe);
-  
+
   if (hireMe === 'yes' || hireMe === 'y') {
     alert('Glad to hear that! Keep me in your network!');
     tallyWins++;
@@ -84,10 +84,10 @@ function bonusQ() {
 function occupationalTherapy() {
   var grandkidQty = parseInt(prompt('I have grandkids, but fewer than 10. Care to guess how many?'));
   //console.log('first guess?: ', grandkidQty); //Display pre-loop guess in console
-  
+
   for( var i = 0; i < 4; i++) {
     //  console.log('What number?:', typeof grandkidQty); // Confirm current guess entering the loop
-    
+
     if (grandkidQty === 9) { // Catching the correct guess...
       alert('You got it!');
       //console.log('Correct guess: ', grandkidQty);
@@ -113,7 +113,7 @@ function guiltyPleasure() {
   favoriteCookies = ['ginger snaps', 'snickerdoodles', 'oatmeal raisin', 'molasses']; //Some of the top correct answers
   var count = 0;
   var cookieGuess = prompt('Can you guess one of my favorite cookie types? - Food, not web...');
-  
+
   while(count < 6) { // Let looping ensue! Six rounds only.
     console.log('What type of cookie?', cookieGuess);
     for (var i = 0; i < favoriteCookies.length; i++) {
@@ -139,10 +139,10 @@ function guiltyPleasure() {
 
 //Quiz button launches the questions as follows:
 function quizQuestions() {
-  origins();
-  cali();
+  cardCPUs();
+  militaryPast();
   degree();
-  la();
+  writer();
   occupationalTherapy();
   guiltyPleasure();
   bonusQ();
